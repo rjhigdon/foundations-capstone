@@ -7,33 +7,40 @@
     <title>Game List</title>
 </head>
 <body>
-    <header>
+    <header id="header">
         <h2>Games List</h2>
 
-        <div class="container">
+        <p>add game</p>
+        <p>find game</p>
+        
             <form  action="search" id="search-form">
                 <input type="text" placeholder="Search Game" name="q" id="search-bar">
                 <button type="submit" id="searchBtn">Search</button>
-           
-            <nav id="advSearch">
-                <a href="./advSearch" >Advanced Search</button>
-            </nav>
-         </form>
-        </div>
+            </form>
     </header>
     
-        <div>
-            <button> Add Game</button>
-        </div>
+    
+    <div class="form-popup" id="game-form">
+        <form action="/action_page.php" class="addGame-container">
+          <h1>Add Game</h1>
+          <input type="text" placeholder="Game Title" name="Title" required>
+          <input type="text" placeholder="Genre" name="genre" required>
+          <select name="subject" id="subject">
+            <option value="" selected="selected">Console</option>
+          </select>
+          <br><br>
+      
+          <button type="button" class="btn cancel" onclick="closeForm()">Add</button>
+        </form>
+      </div>
 
-
-
+    <button onclick="togglePopup()">Add Game</button>
 
         
 
 
 
-
+    <script src="../node_modules/axios/dist/axios.min.js"></script>
     <script src="./index.js"></script>
 </body>
 </html>
