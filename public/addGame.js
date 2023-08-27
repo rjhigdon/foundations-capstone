@@ -14,10 +14,13 @@ const addGame = (event) => {
         description: gameDesc.value, 
     }
     console.log(addGame)
-    axios
-
-    }
+    axios.psot('http://localhost:4000/api/addGame', newGame)
+    .then((res) => {
+        console.log(res.data)
+    })
+    .cathc((err) => {
+        console.error(err)
+    })
 }
 
-
-
+form.addEventListener('submit', addGame)

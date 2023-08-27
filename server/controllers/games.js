@@ -27,6 +27,16 @@ module.exports = {
             res.staus(200).send(dbRes[0])
         })
     },
+    deleteGame: (req, res) => {
+        let {id} = req.params
+        db.query(`
+        DELETE FROM games WHERE id = ${id};
+        SELECT * FROM games;
+        `)
+        .then((dbRes) => {
+            res.status(200).send(dbRes[0])
+        })
+    }
     
 
 }

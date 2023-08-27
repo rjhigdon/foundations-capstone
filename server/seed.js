@@ -11,7 +11,7 @@ const seed = () => {
 
         );
     `).then(() => {
-        console.log('Seeded :)')
+        console.log('your db is Seeded :)')
     })
 }
 
