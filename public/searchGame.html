@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Search Game</title>
+</head>
+<body>
+    <header id="header">
+        <h2>Search Games</h2>
+
+        <nav id="hyper-links">
+          <a href="./index.html">List Games</a>
+          <a href="./searchGame.html">Search Games</a>
+          <a href="./addGame.html">Add Game</a>
+        </nav>
+    </header>
+
+        <form  action="search" id="search-form">
+            <input type="text" placeholder="Search Game" name="q" id="search-bar">
+            <button type="submit" id="searchBtn">Search</button>
+        </form>
+
+        <div class="game-container">
+        
+
+
+        
+        </div>
+    
+    <script src="../node_modules/axios/dist/axios.min.js"></script>
+    <script src="./searchGame.js"></script>
+</body>
+</html>
