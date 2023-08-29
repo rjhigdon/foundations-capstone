@@ -1,10 +1,10 @@
-console.log('connected to addGame')
 const form = document.getElementById("add-form")
 const gameTitle = document.getElementById("title-bar")
 const gameGenre = document.getElementById("genre-bar")
-const gameConsole = document.getElementById("console-bar")
+const VGconsole = document.getElementById("console-bar")
 const gameDesc = document.getElementById("desc-bar")
 const gameRating = document.querySelectorAll('input[name="rating"]')
+const gameBoxart = document.getElementById("game-img")
 
 const addGame = (event) => {
     event.preventDefault()
@@ -19,7 +19,7 @@ const addGame = (event) => {
     let newGame={
         title: gameTitle.value,
         genre: gameGenre.value, 
-        console: gameConsole.value, 
+        VGconsole: VGconsole.value, 
         description: gameDesc.value,
         rating: selectedRating,
     }
@@ -27,6 +27,8 @@ const addGame = (event) => {
     axios.post('http://localhost:4000/api/addGame', newGame)
     .then((res) => {
         console.log(res.data)
+        alert(`Added ${gameTitle.value} to List`)
+        form.reset()
     })
     .catch((err) =>{
         console.error(`your error is: ${err}`)

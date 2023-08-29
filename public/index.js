@@ -1,11 +1,11 @@
 const list = document.getElementById('games-container')
 
 const deleteGame = (id) => {
-    console.log(` your item at index ${id} was deleted`)
     axios.delete(`http://localhost:4000/api/deleteGame/${id}`)
     .then((res) =>{
         list.innerHTML =""
         res.data.forEach(addGame)
+        alert(`Game Deleted`)
     })
     .catch((err) =>{
         console.error(err)
@@ -33,21 +33,25 @@ const addGame = (game) => {
 
     let title = document.createElement('h3')
     title.textContent = game.title
-    let genre = document.createElement('p')
-    genre.textContent = game.genre
-    let console = document.createElement('p')
-    console.textContent = game.console
-    let description = document.createElement('p')
-    description.textContent = game.description
+
     let rating = document.createElement('p')
     rating.textContent = game.rating
 
+    let VGconsole = document.createElement('p')
+    VGconsole.textContent = game.VGconsole
+
+    let description = document.createElement('p')
+    description.textContent = game.description
+
+    let genre = document.createElement('p')
+    genre.textContent = game.genre
+
    
     header.appendChild(title)
-    info.appendChild(genre)
-    info.appendChild(console)
-    info.appendChild(description)
     info.appendChild(rating)
+    info.appendChild(VGconsole)
+    info.appendChild(description)
+    info.appendChild(genre)
 
     let deleteBtn = document.createElement('button')
     deleteBtn.textContent = "delete"

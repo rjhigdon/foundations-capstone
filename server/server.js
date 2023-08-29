@@ -2,7 +2,7 @@ const express = require('express')
 const cors = require('cors')
 const db = require('./database')
 const seed = require('./seed')
- const {addGame, getGames, deleteGame} = require('./controllers/games')
+const {addGame, getGames, deleteGame, titleSearchGame, genreSearchGame, consoleSearchGame, ratingSearchGame} = require('./controllers/games')
 
 const app = express()
 app.use(express.json())
@@ -11,6 +11,10 @@ app.post('/api/seed', seed)
 
 app.post('/api/addGame', addGame)
 app.get('/api/getGames', getGames)
+app.get('/api/titleSearchGame/:title', titleSearchGame)
+app.get('/api/genreSearchGame/:genre', genreSearchGame)
+app.get('/api/consoleSearchGame/:VGconsole', consoleSearchGame)
+app.get('/api/ratingSearchGame/:rating', ratingSearchGame)
 app.delete('/api/deleteGame/:id', deleteGame)
 
 

@@ -4,10 +4,10 @@ const seed = () => {
     db.query(`
         CREATE TABLE games (
             id SERIAL PRIMARY KEY,
-            title VARCHAR(20),
-            genre VARCHAR(20),
-            console VARCHAR(20),
-            description VARCHAR(250),
+            title VARCHAR(30),
+            genre VARCHAR(50),
+            VGconsole VARCHAR(20),
+            description VARCHAR(500),
             rating INTEGER
         );
     `).then(() => {
