@@ -82,11 +82,16 @@ body::before {
     width: 500px;
     height: 60px;
     padding-left: 5px;
+    font-size: 25pt;
+    color: #8d63df;
+    -webkit-text-stroke: 0.6px #000233;
+    text-shadow: 1px 1px 1px;
     background-color: #44b6db;
 }
 .add-bar::placeholder{
     color: #8d63df;
     -webkit-text-stroke: 0.6px #000233;
+    text-shadow: 1px 1px 1px;
     font-size: 25pt;
     padding-left: 5px;
     padding-top: 20px;
@@ -95,12 +100,18 @@ body::before {
     border-radius: 25px;
     width: 500px;
     height: 60px;
-    padding-left: 5px;
+    padding-left: 15px;
+    padding-top: 15px;
+    color: #8d63df;
+    -webkit-text-stroke: 0.6px #000233;
+    text-shadow: 1px 1px 1x;
+    font-size: 25pt;
     background-color: #44b6db;
 }
 #desc-bar::placeholder{
     color: #8d63df;
     -webkit-text-stroke: 0.6px #000233;
+    text-shadow: 1px 1px 1px;
     position: absolute;
     font-size: 25pt;
     top: 2px;
@@ -120,7 +131,6 @@ body::before {
     position: relatve;
     top: 50vh;
     left: 50vh;
-    font-size: 16pt;
     padding-top: 100px;
     width: 800px;
     height: 700px;
@@ -143,13 +153,6 @@ body::before {
     align-items: center;
     gap: 8px;
 } 
-.search-wrapper{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
-}
 #searchBtn{
     border-radius: 25px;
     width: 300px;
@@ -157,6 +160,10 @@ body::before {
     padding-left: 5px;
     font-size: 25pt;
     margin-top: 40px;
+    color: #e261be;
+    border: solid #e261be;
+    background-color: #00c4ff;
+    text-shadow: 2px 2px 2px;
     transition: box-shadow 0.3s infinite alternate; /* Add transition to create smooth effect */
 }
 #searchBtn:hover{
