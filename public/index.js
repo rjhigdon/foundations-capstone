@@ -32,29 +32,39 @@ const addGame = (game) => {
     card.appendChild(buttons)
 
     let title = document.createElement('h3')
+    title.setAttribute("id","card-title")
     title.textContent = game.title
 
     let rating = document.createElement('p')
-    rating.textContent = game.rating
+    rating.setAttribute("id","card-rating")
+    rating.setAttribute("class", "card-info")
+    rating.textContent = `Rating: ${game.rating}/10`
 
-    let VGconsole = document.createElement('p')
-    VGconsole.textContent = game.VGconsole
+    let vgconsole = document.createElement('p')
+    vgconsole.setAttribute("id","card-console")
+    vgconsole.setAttribute("class", "card-info")
+    vgconsole.textContent = `Console: ${game.vgconsole}`
 
     let description = document.createElement('p')
-    description.textContent = game.description
+    description.setAttribute("id","card-desc")
+    description.setAttribute("class", "card-info")
+    description.textContent = `Description: ${game.description}`
 
     let genre = document.createElement('p')
-    genre.textContent = game.genre
+    genre.setAttribute("id","card-genre")
+    genre.setAttribute("class", "card-info")
+    genre.textContent = `Genre: ${game.genre}`
 
    
     header.appendChild(title)
     info.appendChild(rating)
-    info.appendChild(VGconsole)
+    info.appendChild(vgconsole)
     info.appendChild(description)
     info.appendChild(genre)
 
-    let deleteBtn = document.createElement('button')
-    deleteBtn.textContent = "delete"
+    let deleteBtn = document.createElement('p')
+    deleteBtn.setAttribute("id", "card-delete")
+    deleteBtn.textContent = "X"
     deleteBtn.classList.add('delete-button')
 
     buttons.appendChild(deleteBtn)

@@ -11,51 +11,43 @@
         <h2>Search Games</h2>
 
         <nav id="hyper-links">
-          <a href="./index.html">List Games</a>
-          <a href="./searchGame.html">Search Games</a>
-          <a href="./addGame.html">Add Game</a>
+            <a href="./index.html" class="nav-link"> <img src="../Resources/stack.png" alt="stack" id="stack-img">List Games
+
+            </a>
+
+            <a href="./searchGame.html" class="nav-link"> <img src="../Resources/magnifying-glass.png" alt="magnifying glass" id="magnifying-glass">
+            Search Games
+
+            </a>
+
+            <a href="./addGame.html" class="nav-link">
+                <img src="../Resources/plus-sign.png" alt="plus-sign" id="plus-sign"> 
+                Add Game
+            </a>
         </nav>
     </header>
 
         <div class="search-wrapper">
          <div>
-            <label for="title-search-bar"> Search by Title</label>
-            <input type="text" name="search" id="title-search-bar" placeholder="Search Game"></input>
+            <label for="title-search-bar" class="search-label" id="title-label"> Search by:</label>
+            <input  type="text" class="search-bar" name="search" id="title-search-bar" placeholder="Title"></input>
          </div>
          <div>
-            <label for="genre-search-bar"> Search by Genre</label>
-            <input type="text" name="search" id="genre-search-bar" placeholder="Search Game"></input>
+            <input type="text" name="search" class="search-bar" id="genre-search-bar" placeholder="Genre"></input>
          </div>       
          <div>
-            <label for="console-search-bar"> Search by Console</label>
-            <input type="text" name="search" id="console-search-bar" placeholder="Search Game"></input>
+            <input type="text" name="search" class="search-bar" id="console-search-bar" placeholder="Console"></input>
          </div>       
          <div>
-            <label for="rating-search-bar"> Search by Rating</label>
-            <input type="text" name="search" id="rating-search-bar" placeholder="Search Game"></input>
+            <input type="text" name="search" class="search-bar" id="rating-search-bar" placeholder="Rating"></input>
          </div>       
            
         </div>
 
         <div id="search-results">
-            <!-- <div class="game-card">
             
-                <h3>Example Game</h3>   
-                <div class="game-info">
-                    <p>Genre Info</p>
-                    <p>Console Info</p>
-                    <p>Description Info</p>
-                    <p>Rating Info</p>
-                </div>        
-                
-                
-                <div class="btns">
-                    <button id="delete-btn">delete</button>
-                </div> 
-
-
         
-        </div> -->
+        </div> 
     
     <script src="../node_modules/axios/dist/axios.min.js"></script>
     <script src="./searchGame.js"></script>
